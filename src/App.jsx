@@ -24,13 +24,13 @@ function App() {
                 <FiMail className="mr-2" />
                 Compose
               </button>
-              <button
+              {/* <button
                 onClick={() => setActiveTab('history')}
                 className={`px-4 py-2 rounded-lg flex items-center ${activeTab === 'history' ? 'bg-purple-100 text-purple-600' : 'text-gray-600 hover:bg-gray-100'}`}
               >
                 <FiList className="mr-2" />
                 History
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
