@@ -1,0 +1,6 @@
+# Block all crawlers from all files
+User-agent: *
+Disallow: /
+
+# (Optional) Sitemap - usually unnecessary if everything is blocked
+# Sitemap: https://your-vercel-app.vercel.app/sitemap.xml
