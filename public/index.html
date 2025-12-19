@@ -2,33 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#667eea" />
-    <meta name="description" content="Email Dashboard - Send emails through GoDaddy backend" />
-    <meta name="keywords" content="email, dashboard, godaddy, vercel, react" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Email Dashboard" />
-    <meta property="og:description" content="Send emails through your GoDaddy backend" />
-    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Email Dashboard" />
-    <meta property="twitter:description" content="Send emails through your GoDaddy backend" />
-    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
-    
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    
-    <!-- Manifest -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <!-- Preconnect to APIs -->
-    <link rel="preconnect" href="https://your-godaddy-domain.com" />
-    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -139,7 +115,7 @@
       }
     </style>
     
-    <title>Email Dashboard - Send emails through GoDaddy</title>
+    <title>Email Dashboard - Send emails</title>
   </head>
   <body>
     <noscript>
@@ -199,62 +175,6 @@
     
     <!-- Root element for React -->
     <div id="root"></div>
-    
-    <!-- Optional: Service worker for PWA -->
-    <script>
-      // Hide loading screen when app loads
-      window.addEventListener('load', function() {
-        const loadingScreen = document.getElementById('loading-screen');
-        if (loadingScreen) {
-          setTimeout(() => {
-            loadingScreen.style.opacity = '0';
-            setTimeout(() => {
-              loadingScreen.style.display = 'none';
-            }, 500);
-          }, 500);
-        }
-      });
-      
-      // Register service worker for PWA
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js').then(
-            (registration) => {
-              console.log('ServiceWorker registration successful');
-            },
-            (err) => {
-              console.log('ServiceWorker registration failed: ', err);
-            }
-          );
-        });
-      }
-      
-      // Global error handler
-      window.onerror = function(message, source, lineno, colno, error) {
-        console.error('Global error:', { message, source, lineno, colno, error });
-        return false;
-      };
-      
-      // Detect if app is running on Vercel
-      window.isVercel = window.location.hostname.includes('vercel.app');
-      
-      // Environment configuration
-      window.env = {
-        API_BASE_URL: process.env.REACT_APP_API_BASE_URL || 'https://your-godaddy-domain.com/api',
-        NODE_ENV: process.env.NODE_ENV || 'development'
-      };
-    </script>
-    
-    <!-- Performance monitoring (optional) -->
-    <script>
-      // Log performance metrics
-      window.addEventListener('load', function() {
-        setTimeout(() => {
-          const perfData = window.performance.timing;
-          const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-          console.log('Page load time:', pageLoadTime + 'ms');
-        }, 0);
-      });
-    </script>
+
   </body>
 </html>

@@ -63,7 +63,7 @@ const EmailForm = () => {
             Email Dashboard
           </h1>
           <p className="text-gray-600">
-            Send emails through your GoDaddy backend
+            Send emails 
           </p>
         </header>
 

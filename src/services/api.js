@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// Replace with your GoDaddy backend URL
+
 const API_BASE_URL = 'https://tradeinusdt.com/mail-dashboard/vercel-backend/api';
 
 const api = axios.create({
